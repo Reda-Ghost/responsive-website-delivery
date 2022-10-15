@@ -104,3 +104,28 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme());
 	localStorage.setItem('selected-icon', getCurrentIcon());
 });
+
+/*=============== SCROLL REVEAL ===============*/
+const sr = ScrollReveal({
+	origin: 'top',
+	distance: '50px',
+	duration: 2500,
+	reset: false,
+	delay: 400,
+});
+
+// TOP
+sr.reveal(`.home__data, .app__data, .contact__container`, {origin: 'top'});
+
+// RIGHT
+sr.reveal(`.home__img`, { delay: 700, origin: 'right' });
+
+// BOTTOM
+sr.reveal(`.footer__social`, { origin: 'bottom', delay: 1000 });
+sr.reveal(`.services__data, .footer__content`, { origin: 'bottom', interval: 100 });
+sr.reveal(`.security__img`, { origin: 'bottom', delay: 700 });
+sr.reveal(`.about__data`, { origin: 'bottom' });
+
+// LEFT
+sr.reveal(`.security__data`, { origin: 'left' });
+sr.reveal(`.about__img, .app__img`, { origin: 'left', delay: 700 });
